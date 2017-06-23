@@ -1,2 +1,3 @@
 Dane przed zapisem. 
   dane po zapisie w pliku tekst.txt
+  dane po zapisie w pliku tekst.txt

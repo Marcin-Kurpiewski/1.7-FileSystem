@@ -9,15 +9,13 @@ fs.stat('./photo.jpg', function(err, stats){
 
 });
 
-fs.readFile('./tekst.txt', 'utf-8', function(err, data) {
-	console.log("dane przed zapisem".red);
+fs.readdir('./node_modules', 'utf-8', function(err, data) {
+    console.log("czytam-folder".red);
     console.log(data);
-    fs.appendFile('./tekst.txt', '\n  dane po zapisie w pliku tekst.txt',  function(err){
-    	if(err) throw err;
-    	console.log('zapisano!'.magenta);
-    	fs.readFile('./tekst.txt', 'utf-8', function(err, data){
-    		console.log("dane po zapisie".rainbow);
-    		console.log(data);
-    	});
+    fs.writeFile('./tekst1.txt', data ,  function(err){
+        if(err) throw err;
+        console.log('zapisano dane'.magenta);
     });
 });
+
+
